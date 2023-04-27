@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,44 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-        <!-- Basic example -->
-        <dog-list name="Dog list component"></dog-list>
-        <!-- Intermediate example with custom elements-->
-        <button is="console-button">Click here</button>
-        <!-- Advanced example -->
+    <!-- Basic example -->
+    <dog-list name="Dog list component"></dog-list>
+    <!-- Intermediate example with custom elements-->
+    <button is="console-button">Click here</button>
+    <!-- Advanced example -->
+    <template id="gallery-template">
+        <style>
+            .gallery-slot {
+                display: grid;
+                grid-template-columns: repeat(3, 250px);
+                grid-gap: 100px;
+                margin: 20px 0;
+                padding: 0;
+                list-style: none;
+            }
+        </style>
+
+        <ul class="gallery-slot">
+            <slot></slot>
+        </ul>
+    </template>
+
+    <my-gallery>
+        <li class="gallery-item">
+            <img class="gallery-image" src="./img/img-1.jpg" alt="Gallery Image">
+            <p class="gallery-caption">Image 1</p>
+        </li>
+        <li class="gallery-item">
+            <img class="gallery-image" src="./img/img-2.jpg" alt="Gallery Image">
+            <p class="gallery-caption">Image 2</p>
+        </li>
+        <li class="gallery-item">
+            <img class="gallery-image" src="./img/img-3.jpg" alt="Gallery Image">
+            <p class="gallery-caption">Image 3</p>
+        </li>
+    </my-gallery>
 </body>
+
 </html>

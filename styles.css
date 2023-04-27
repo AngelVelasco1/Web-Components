@@ -1,4 +1,15 @@
+* {
+    font-family: system-ui;
+    
+}
 dog-list {
     background-color:rgb(34, 255, 119);
     font-size: 20px;
+}
+my-gallery img {
+    width: 300px;
+}
+.gallery-caption {
+    font-size:18px;
+    font-weight:bold;
 }
